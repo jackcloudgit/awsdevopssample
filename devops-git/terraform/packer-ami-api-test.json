@@ -10,20 +10,9 @@
   "provisioners": [
     {
       "type": "shell",
-      "inline": ["mkdir api", "sudo apt-get update", "sudo apt-get -y install npm"],
+      "inline": ["mkdir api", "sudo apt-get update"],
       "pause_before": "10s"
-    },
-    {
-      "type": "file",
-      "source" : "../api/",
-      "destination" : "api"
-    },
-
-    {
-    "type": "shell",
-    "inline": ["cd api", "npm install"],
-    "pause_before": "10s"
-    }
+    }       
   ]
 }
 

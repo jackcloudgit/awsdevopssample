@@ -1,8 +1,8 @@
 {
   "builders": [{
     "type": "amazon-ebs",
-    "region": "eu-west-1",
-    "source_ami": "ami-844e0bf7",
+    "region": "us-east-1",
+    "source_ami": "ami-04b9e92b5572fa0d1",
     "instance_type": "t2.micro",
     "ssh_username": "ubuntu",
     "ami_name": "web-instance {{timestamp}}"
@@ -10,7 +10,7 @@
   "provisioners": [
     {
       "type": "shell",
-      "inline": ["mkdir web", "sudo apt-get update", "sudo apt-get -y install npm nodejs-legacy"],
+      "inline": ["mkdir web", "sudo apt-get update", "sudo apt-get -y install npm"],
       "pause_before": "10s"
     },
     {
